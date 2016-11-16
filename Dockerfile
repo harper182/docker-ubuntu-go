@@ -11,6 +11,6 @@ RUN \
   apt-get install -y google-chrome-stable
 ADD go-agent  /
 WORKDIR /go-agent
-RUN chmod a+x start.sh
-CMD ['start.sh']
-EXPOSE  
+RUN chmod a+x agent.sh
+CMD ['agent.sh']
+EXPOSE  8153
