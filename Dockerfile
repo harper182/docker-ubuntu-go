@@ -9,8 +9,8 @@ RUN \
   echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
   apt-get update && \
   apt-get install -y google-chrome-stable
-ADD go-agent  /
-WORKDIR /go-agent
-RUN chmod a+x agent.sh
-CMD ['agent.sh']
+RUN mkdir /go-agent/
+ADD go-agent/  /go-agent/
+RUN chmod a+x /go-agent/agent.sh
+CMD ['/go-agent/agent.sh']
 EXPOSE  8153
