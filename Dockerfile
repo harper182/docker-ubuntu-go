@@ -1,5 +1,5 @@
 # Pull base image.
-FROM dockerfile/ubuntu-desktop
+FROM queeno/ubuntu-desktop
 
 # Install Chromium.
 RUN \
